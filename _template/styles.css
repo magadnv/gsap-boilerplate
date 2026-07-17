@@ -1,0 +1,13 @@
+@import url("../../shared/base.css");
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.box {
+  width: 120px;
+  height: 120px;
+  background: var(--lime);
+}
