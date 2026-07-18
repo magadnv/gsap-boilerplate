@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP · SVG Plugins</title>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="demo-section" id="draw-demo">
+        <div class="draw-card">
+          <svg class="draw-svg" viewBox="0 0 100 100" width="140" height="140">
+            <circle class="draw-ring" cx="50" cy="50" r="42" fill="none" stroke-width="4" />
+            <circle class="draw-dot" cx="50" cy="50" r="10" />
+          </svg>
+          <div class="draw-copy">
+            <p class="eyebrow">01 — DrawSVG</p>
+            <h2>Any place,</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-section" id="motionpath-demo">
+        <div class="motionpath-card">
+          <p class="eyebrow">02 — MotionPath</p>
+          <h2>is a place</h2>
+          <svg class="motionpath-svg" viewBox="0 0 800 200" width="100%" height="200">
+            <path id="travel-path" d="M20,100 C150,20 250,180 400,100 S650,20 780,100" fill="none" stroke-width="2" />
+            <circle class="motion-dot" r="10" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="demo-section" id="morph-demo">
+        <div class="morph-card">
+          <p class="eyebrow">03 — MorphSVG</p>
+          <h2>to begin.</h2>
+          <svg class="morph-svg" viewBox="0 0 100 100" width="120" height="120">
+            <path id="morph-shape" d="M50,10 C72.09,10 90,27.91 90,50 C90,72.09 72.09,90 50,90 C27.91,90 10,72.09 10,50 C10,27.91 27.91,10 50,10 Z" />
+          </svg>
+          <button class="morph-btn">Begin →</button>
+
+          <svg style="display:none">
+            <path id="place-shape" d="M50,10 C72.09,10 90,27.91 90,50 C90,72.09 72.09,90 50,90 C27.91,90 10,72.09 10,50 C10,27.91 27.91,10 50,10 Z" />
+            <path id="spark-shape" d="M50 5 L61 35 L95 35 L68 57 L79 91 L50 70 L21 91 L32 57 L5 35 L39 35 Z" />
+          </svg>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/DrawSVGPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/MotionPathPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/MorphSVGPlugin.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
