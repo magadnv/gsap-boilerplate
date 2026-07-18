@@ -1,0 +1,163 @@
+@import url("../../shared/base.css");
+
+.spacer,
+.demo-section,
+.pin-section {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.pin-section {
+  background: var(--ink);
+  overflow: hidden;
+  position: relative;
+}
+
+.fade-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4vw;
+  align-items: center;
+  max-width: 1100px;
+  padding: 0 6vw;
+}
+
+.fade-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.fade-copy h2 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: .95;
+  letter-spacing: -.04em;
+  margin: 0 0 1rem;
+}
+
+.scrub-demo {
+  position: relative;
+  overflow: hidden;
+}
+
+.scrub-media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.scrub-media img {
+  width: 100%;
+  height: 130%;
+  object-fit: cover;
+  position: absolute;
+  top: -15%;
+  left: 0;
+}
+
+.scrub-heading {
+  position: relative;
+  z-index: 2;
+  color: var(--paper);
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: .9;
+  letter-spacing: -.05em;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, .4);
+}
+
+.pin-panels {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.pin-panel {
+  position: absolute;
+  inset: 0;
+}
+
+.pin-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pin-caption {
+  position: absolute;
+  bottom: 3rem;
+  left: 4vw;
+  color: var(--paper);
+}
+
+.pin-caption span {
+  font: .8rem "DM Mono", monospace;
+}
+
+.pin-caption h3 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  letter-spacing: -.05em;
+  margin: .3rem 0 0;
+}
+
+.horizontal-section {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background: var(--purple);
+}
+
+.horizontal-track {
+  display: flex;
+  height: 100%;
+  width: max-content;
+}
+
+.h-panel {
+  width: 100vw;
+  height: 100%;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  padding: 0 8vw;
+}
+
+.h-panel h2 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1;
+  letter-spacing: -.04em;
+  text-align: center;
+}
+
+.scroll-nav {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 1.5rem;
+  padding: .7rem 1.4rem;
+  background: rgba(22, 22, 22, .85);
+  backdrop-filter: blur(6px);
+}
+
+.scroll-nav a {
+  color: var(--paper);
+  font: .75rem "DM Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  opacity: .5;
+  transition: opacity .2s, color .2s;
+}
+
+.scroll-nav a.active {
+  opacity: 1;
+  color: var(--lime);
+}
+
+@media (max-width: 700px) {
+  .fade-card {
+    grid-template-columns: 1fr;
+  }
+}

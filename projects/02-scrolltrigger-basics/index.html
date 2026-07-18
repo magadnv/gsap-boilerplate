@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP · ScrollTrigger</title>
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="scroll-nav">
+      <a href="#fade-demo" class="active">Fade</a>
+      <a href="#scrub-demo">Scrub</a>
+      <a href="#horizontal-demo">Horizontal</a>
+      <a href="#pin-demo">Pin</a>
+    </nav>
+    <main>
+      <section class="spacer">
+        <p class="eyebrow">Scroll runter ↓</p>
+      </section>
+
+      <section class="demo-section" id="fade-demo">
+        <div class="fade-card">
+          <img src="../../images/milad-fakurian-FV8ZkyFXbzs-unsplash.jpg" alt="" />
+          <div class="fade-copy">
+            <p class="eyebrow">01 — toggleActions</p>
+            <h2>Elemente treten<br />in Erscheinung.</h2>
+            <p class="intro">Sobald diese Karte in den Viewport scrollt, spielt GSAP die Animation einmalig ab — und beim Zurückscrollen wieder rückwärts.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-section scrub-demo" id="scrub-demo">
+        <div class="scrub-media">
+          <img src="../../images/alexander-kaufmann-Ugt7qJj3ixc-unsplash.jpg" alt="" />
+        </div>
+        <h2 class="scrub-heading">Parallax<br />in Bewegung.</h2>
+      </section>
+
+      <section class="horizontal-section" id="horizontal-demo">
+        <div class="horizontal-track">
+          <div class="h-panel"><h2>Scroll ist mehr</h2></div>
+          <div class="h-panel"><h2>als nur hoch</h2></div>
+          <div class="h-panel"><h2>und runter.</h2></div>
+          <div class="h-panel"><h2>Mit GSAP steuerst<br />du jede Achse. →</h2></div>
+        </div>
+      </section>
+
+      <section class="pin-section" id="pin-demo">
+        <div class="pin-panels">
+          <article class="pin-panel" data-panel="1">
+            <img src="../../images/ryoji-iwata-GQyn7iDAjNM-unsplash.jpg" alt="" />
+            <div class="pin-caption"><span>01</span><h3>Motion</h3></div>
+          </article>
+          <article class="pin-panel" data-panel="2">
+            <img src="../../images/la-la-I17-Jb0zuwQ-unsplash.jpg" alt="" />
+            <div class="pin-caption"><span>02</span><h3>Pattern</h3></div>
+          </article>
+          <article class="pin-panel" data-panel="3">
+            <img src="../../images/xiang-ji-Wv0eXHL2rTc-unsplash.jpg" alt="" />
+            <div class="pin-caption"><span>03</span><h3>Texture</h3></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="spacer">
+        <p class="eyebrow">Ende</p>
+      </section>
+    </main>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <!-- Weitere Plugins bei Bedarf ergänzen, z.B.: -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
